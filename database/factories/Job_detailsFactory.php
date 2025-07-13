@@ -20,6 +20,7 @@ class Job_detailsFactory extends Factory
         return [
             'title' => fake()->name(),
             'user_id' => User::inRandomOrder()->first()->id,
+           // 'user_id' => rand(1,4),
             'job_type_id' => rand(1,5),
             'category_id' => rand(1,5),
             'vacancy' => rand(1,5),

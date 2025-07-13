@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/jobs',[Job_detailsController::class,'index'])->name('job_details');
 Route::get('/jobs/detail/{id}',[Job_detailsController::class,'detail'])->name('jobDetailpage');
-
+Route::post('/apply-job',[Job_detailsController::class,'applyJob'])->name('applyJob');
+Route::post('/save-job',[Job_detailsController::class,'saveJob'])->name('saveJob');
 
 
 Route::group(['account'],function(){
@@ -31,10 +32,17 @@ Route::group(['account'],function(){
        Route::post('/account/update-profile-pic',[AccountController::class,'updateProfilePic'])->name('account.updateProfilePic');
        Route::get('/account/create-job',[AccountController::class,'createJob'])->name('account.createJob');
        Route::post('/account/save-job',[AccountController::class,'saveJob'])->name('account.saveJob');
+       Route::post('/account/remove-save-job',[AccountController::class,'removeSavedJob'])->name('account.removeSavedJob');
+    
        Route::get('/account/my-jobs',[AccountController::class,'myJobs'])->name('account.job.myJobs');
        Route::get('/account/my-jobs/edit/{jobId}',[AccountController::class,'editJobs'])->name('account.editJobs');
        Route::post('/account/update-job/{jobId}',[AccountController::class,'updateJob'])->name('account.updateJob');
        Route::post('/account/delete-job',[AccountController::class,'deleteJob'])->name('account.deleteJob');
+       Route::get('/account/my-job-applications',[AccountController::class,'myJobApplications'])->name('account.myJobApplications');
+       Route::post('/account/remove-job-application',[AccountController::class,'removeJob'])->name('account.removeJob');
+       Route::get('/account/saved-jobs',[AccountController::class,'savedJobs'])->name('account.savedJobs');
+
+
        Route::post('/account/update-password',[AccountController::class,'updatePassword'])->name('account.updatePassword');
 
 
