@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Intervention\Image\ImageManager;
-use Intervention\Image\Drivers\Gd\Driver;
+//use Intervention\Image\ImageManager;
+//use Intervention\Image\Drivers\Gd\Driver;
 
 class AccountController extends Controller
 {
@@ -141,16 +141,16 @@ class AccountController extends Controller
             
 
             //Create Small thumbnail
-            $sourcePath = public_path('/profilePic/' . $imagename);
-            $manager = new ImageManager(Driver::class);
-            $image = $manager->read($sourcePath);
+           // $sourcePath = public_path('/profilePic/' . $imagename);
+           // $manager = new ImageManager(Driver::class);
+           // $image = $manager->read($sourcePath);
 
             // crop the best fitting 5:3 (600x360) ratio and resize to 600x360 pixel
-            $image->cover(150, 150);
-            $image->toPng()->save(public_path('/profilePic/thumb/'. $imagename));
+           // $image->cover(150, 150);
+           // $image->toPng()->save(public_path('/profilePic/thumb/'. $imagename));
 
             //Delete Old Profile
-            File::delete(public_path('/profilePic/thumb/'. Auth::user()->image));
+           // File::delete(public_path('/profilePic/thumb/'. Auth::user()->image));
             File::delete(public_path('/profilePic/'. Auth::user()->image));
 
 
