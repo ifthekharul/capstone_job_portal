@@ -56,7 +56,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
                     <a href="{{ route("job_details").'?category='. $category->id }}"><h4 class="pb-2">{{ $category->name}}</h4></a>
-                    <p class="mb-0"> <span>0</span> Available position</p>
+                    <p class="mb-0"> <span>{{ $category->jobs_count}}</span> Available position</p>
                 </div>
             </div>
             @endforeach

@@ -9,4 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    public function jobs()
+    {
+        return $this->hasMany(Job_details::class, 'category_id');
+    }
 }

@@ -10813,4 +10813,15 @@ footer .nav-link {
     background: #00d363 !important;
     color: #fff !important;
 }
+
+.dashboard {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 400;
+}
+
+ .pagination span{
+    font-size: inherit;
+ }
 /* '' */

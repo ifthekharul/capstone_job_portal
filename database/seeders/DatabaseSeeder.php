@@ -23,16 +23,31 @@ class DatabaseSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@user.com',
             'password' => 'user@1234',
+            'role'=>'user',
         ]);
         User::factory()->create([
             'name' => 'Niloy',
             'email' => 'niloy@user.com',
             'password' => 'niloy@1234',
+            'role'=>'admin',
         ]);
         User::factory()->create([
             'name' => 'Rohan Ahamed',
             'email' => 'rohan@user.com',
             'password' => 'rohan@1234',
+            'role'=>'user',
+        ]);
+        User::factory()->create([
+            'name' => 'Admin 2',
+            'email' => 'admin2@admin.com',
+            'password' => 'admin2@1234',
+            'role'=>'admin',
+        ]);
+        User::factory()->create([
+            'name' => 'Asif',
+            'email' => 'asif@user.com',
+            'password' => 'asif@1234',
+            'role'=>'user',
         ]);
 
         //Category::factory(5)->create();
@@ -92,7 +107,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        Job_details::factory(25)->create();
+        Job_details::factory(50)->create();
 
-            }
+    }
 }

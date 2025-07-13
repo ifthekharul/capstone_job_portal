@@ -1,5 +1,6 @@
 <?php
-
+namespace App\Http\Middleware;
+use App\Http\Middleware\CheckAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -13,13 +14,19 @@ return Application::configure(basePath: dirname(__DIR__))
     )
 
     
-    ->withMiddleware(function (Middleware $middleware) {
-    $middleware->redirectUsersTo(fn (Request $request) => route('account.profile'));
-     })
+
+     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->alias([
+            'checkRole' => CheckAdmin::class,
+        ]);
+    })
 
     ->withMiddleware(function (Middleware $middleware) {
  
     $middleware->redirectGuestsTo(fn (Request $request) => route('account.login'));
+     })
+     ->withMiddleware(function (Middleware $middleware) {
+    $middleware->redirectUsersTo(fn (Request $request) => route('account.profile'));
      })
 
 
