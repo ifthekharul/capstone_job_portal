@@ -18,6 +18,11 @@ Route::get('/jobs/detail/{id}',[Job_detailsController::class,'detail'])->name('j
 Route::post('/apply-job',[Job_detailsController::class,'applyJob'])->name('applyJob');
 Route::post('/save-job',[Job_detailsController::class,'saveJob'])->name('saveJob');
 
+Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
+Route::post('/process-forgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
+Route::get('/reset-password/{token}',[AccountController::class,'resetPassword'])->name('account.resetPassword');
+Route::post('/process-reset-password',[AccountController::class,'processResetPassword'])->name('account.processResetPassword');
+
 //Admin
 
 Route::group(['prefix'=>'admin','middleware'=>'checkRole'], function(){
