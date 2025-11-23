@@ -1,4 +1,5 @@
 ## 👋 About Me
+Hi, This is Md Ifthe Kharul Alam, Parsing BSC in Daffodil International University. My major is Data Science.
 I’m a passionate web developer with a strong focus on building clean, functional, and scalable applications. Recently, I created a complete Online Job Portal using Laravel and Blade, showcasing my ability to design secure authentication flows, intuitive interfaces, and efficient backend logic. I enjoy learning new technologies and turning ideas into real working projects.
 
 ## 🛠️ Skills
