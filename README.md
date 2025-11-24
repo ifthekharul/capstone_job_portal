@@ -14,7 +14,7 @@ My goal is to grow as a full-stack developer by mastering modern web technologie
 ## 🛠️ Project Description
 The primary objective of this project is to develop a centralized online platform that effectively connects job seekers with potential employers, streamlining the entire job search and recruitment process. The portal aims to make job hunting more efficient by offering advanced search filters such as location, job type, category, and posting date, enabling users to find relevant opportunities with ease. Additionally, the system will incorporate secure user authentication and provide personalized dashboards for both job seekers and employers, allowing them to manage their profiles, applications, and job postings effectively. By simplifying the job application process and optimizing the employer recruitment workflow, the platform seeks to enhance user experience, reduce hiring time, and contribute to a more dynamic and accessible employment ecosystem
 
-# User Features (Job Seekers):
+### User Features (Job Seekers):
 Home: Landing page with featured jobs and categories.
 
 Search: Search bar with auto-suggestions and keyword relevance.
@@ -47,7 +47,7 @@ Saved Jobs: Manage bookmarked job listings.
 
 Logout: Secure sign out.
 
-# User Features (Employers):
+### User Features (Employers):
 Post a Job: Create and manage job postings.
 
 My Created Jobs: Dashboard for monitoring posted jobs.
@@ -58,7 +58,7 @@ Delete Jobs: An employer can delete his own posted jobs.
 
 Edit jobs: An employer can edit his own posted jobs.
 
-# Admin Panel:
+### Admin Panel:
 Manage Users: Manage, delete,  edit any user.
 
 Manage Job Posts: Delete and edit job posts
